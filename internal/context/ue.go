@@ -100,6 +100,8 @@ type UeSmPolicyData struct {
 	PcfUe                  *UeContext
 	InfluenceDataToPccRule map[string]string
 	SubscriptionID         string
+	// UP Node Subscriptions - stores subscriptions for UP node information
+	UpNodeSubscriptions    map[string]interface{} // subscription ID as key, temporarily using interface{}
 }
 
 // NewUeAMPolicyData returns created UeAMPolicyData data and insert this data to Ue.AMPolicyData with assolId as key
